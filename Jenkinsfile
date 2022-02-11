@@ -5,7 +5,7 @@ pipeline {
       stage('checkout') {
            steps {
              
-                git branch: 'master', url: 'https://github.com/devops4solutions/Ansible-Sample-Application-Deployment.git'
+                git branch: 'master', url: 'https://github.com/mahantheshmr/Ansible-Sample-Application-Deployment.git'
              
           }
         }
@@ -32,8 +32,8 @@ pipeline {
                  
              
                
-               sh "ansible-playbook main.yml -i inventories/dev/hosts --user jenkins --key-file ~/.ssh/id_rsa -e '@configs/dev.yml'"
-
+               //sh "ansible-playbook main.yml -i inventories/dev/hosts --user jenkins --key-file ~/.ssh/id_rsa -e '@configs/dev.yml'"
+               sh "ansible-playbook main.yml all 
                
             
             }
